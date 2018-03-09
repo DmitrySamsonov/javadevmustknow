@@ -1,0 +1,67 @@
+The JDBC API provides the following interfaces and classes −
+
++-----------------+-------------------------------------------------------------------------------+
+|                 | This class manages a list of database drivers.                                |
+|                 |                                                                               |
+|                 | Matches connection requests from the java application                         |
+|  DriverManager  | with the proper database driver                                               |
+|                 | using communication sub protocol.                                             |
+|                 |                                                                               |
+|                 | The first driver that recognizes a certain subprotocol under JDBC             |
+|                 | will be used to establish a database Connection.                              |
+|                 |                                                                               |
++-----------------+-------------------------------------------------------------------------------+
+|                 |                                                                               |
+|                 | This interface handles the communications with the database server.           |
+|                 |                                                                               |
+|                 | You will interact directly with Driver objects very rarely.                   |
+|                 |                                                                               |
+|    Driver       | Instead, you use DriverManager objects,                                       |
+|                 | which manages objects of this type.                                           |
+|                 |                                                                               |
+|                 | It also abstracts the details                                                 |
+|                 | associated with working with Driver objects.                                  |
+|                 |                                                                               |
++-----------------+-------------------------------------------------------------------------------+
+|                 |                                                                               |
+|                 | This interface with all methods for contacting a database.                    |
+|                 |                                                                               |
+|   Connection    | The connection object represents communication context,                       |
+|                 | i.e., all communication with database                                         |
+|                 | is through connection object only.                                            |
+|                 |                                                                               |
++-----------------+-------------------------------------------------------------------------------+
+|                 |                                                                               |
+|                 | You use objects created from this interface                                   |
+|                 | to submit the SQL statements to the database.                                 |
+|   Statement     |                                                                               |
+|                 | Some derived interfaces accept parameters                                     |
+|                 | in addition to executing stored procedures.                                   |
+|                 |                                                                               |
++-----------------+-------------------------------------------------------------------------------+
+|                 |                                                                               |
+|                 | These objects hold data retrieved from a database                             |
+|                 | after you execute an SQL query                                                |
+|   ResultSet     | using Statement objects.                                                      |
+|                 |                                                                               |
+|                 | It acts as an iterator to allow you to move through its data.                 |
+|                 |                                                                               |
++-----------------+-------------------------------------------------------------------------------+
+|                 |                                                                               |
+|   SQLException  | This class handles any errors that occur in a database application.           |
+|                 |                                                                               |
++-----------------+-------------------------------------------------------------------------------+
+
+
+
+
+
+:
+
+
+
+:
+
+
+
+:

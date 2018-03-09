@@ -1,0 +1,11 @@
+Register JDBC Driver
+
+
+You must register the driver in your program before you use it.
+
+Registering the driver is the process
+by which the Oracle driver's class file is loaded into the memory,
+so it can be utilized as an implementation of the JDBC interfaces.
+
+You need to do this registration only once in your program.
+You can register a driver in one of two ways.

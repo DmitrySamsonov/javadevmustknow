@@ -1,0 +1,12 @@
+Import JDBC Packages
+
+The Import statements tell the Java compiler
+where to find the classes you reference in your code
+and are placed at the very beginning of your source code.
+
+To use the standard JDBC package,
+which allows you to select, insert, update, and delete data in SQL tables,
+add the following imports to your source code −
+
+import java.sql.* ;  // for standard JDBC programs
+import java.math.* ; // for BigDecimal and BigInteger support

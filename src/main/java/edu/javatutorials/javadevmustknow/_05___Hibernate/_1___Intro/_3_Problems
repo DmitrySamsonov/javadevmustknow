@@ -1,0 +1,29 @@
+First problem,
+what if we need to modify the design of our database after having developed a few pages or our application?
+
+
+Second,
+loading and storing objects in a relational database exposes us to the following five mismatch problems −
+
+
+1. Granularity
+Sometimes you will have an object model, which has more classes than the number of corresponding tables in the database.
+
+2. Inheritance
+RDBMSs do not define anything similar to Inheritance, which is a natural paradigm in object-oriented programming languages.
+
+3. Identity
+An RDBMS defines exactly one notion of 'sameness': the primary key.
+Java, however, defines both object identity (a==b) and object equality (a.equals(b)).
+
+4. Associations
+Object-oriented languages represent associations using object references whereas an RDBMS represents an association as a foreign key column.
+
+5. Navigation
+The ways you access objects in Java and in RDBMS are fundamentally different.
+
+
+
+
+The Object-Relational Mapping (ORM)
+is the solution to handle all the above impedance mismatches.

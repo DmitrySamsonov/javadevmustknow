@@ -1,0 +1,12 @@
+What is JDBC Driver?
+
+
+JDBC drivers implement the defined interfaces in the JDBC API,
+for interacting with your database server.
+
+For example, using JDBC drivers enable you to open database connections and
+to interact with it by sending SQL or database commands then receiving results with Java.
+
+The Java.sql package that ships with JDK, contains various classes
+with their behaviours defined and their actual implementaions are done in third-party drivers.
+Third party vendors implements the java.sql.Driver interface in their database driver.

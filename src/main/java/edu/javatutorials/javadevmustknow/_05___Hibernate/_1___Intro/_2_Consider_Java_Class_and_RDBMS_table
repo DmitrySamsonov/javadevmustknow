@@ -1,0 +1,43 @@
+Consider the Java Class Employee with proper constructors and associated public function −
+
+public class Employee {
+    private int id;
+    private String first_name;
+    private String last_name;
+    private int salary;
+
+    public Employee() {
+    }
+
+    public Employee(String fname, String lname, int salary) {
+        this.first_name = fname;
+        this.last_name = lname;
+        this.salary = salary;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getFirstName() {
+        return first_name;
+    }
+
+    public String getLastName() {
+        return last_name;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+}
+
+objects of Java Class Employee are to be stored and retrieved into the following RDBMS table −
+
+create table EMPLOYEE (
+   id INT NOT NULL auto_increment,
+   first_name VARCHAR(20) default NULL,
+   last_name  VARCHAR(20) default NULL,
+   salary     INT  default NULL,
+   PRIMARY KEY (id)
+);

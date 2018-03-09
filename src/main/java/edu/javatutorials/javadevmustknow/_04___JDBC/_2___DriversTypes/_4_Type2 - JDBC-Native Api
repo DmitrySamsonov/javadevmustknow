@@ -1,0 +1,18 @@
+Type 2: JDBC-Native API
+
+
+In a Type 2 driver,
+JDBC API calls are converted into native C/C++ API calls,
+which are unique to the database.
+
+These drivers are typically provided by the database vendors
+and used in the same manner as the JDBC-ODBC Bridge.
+The vendor-specific driver must be installed on each client machine.
+
+
+If we change the Database, we have to change the native API,
+as it is specific to a database and they are mostly obsolete now,
+but you may realize some speed increase with a Type 2 driver, because it eliminates ODBC's overhead.
+
+
+The Oracle Call Interface (OCI) driver is an example of a Type 2 driver.

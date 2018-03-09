@@ -1,0 +1,36 @@
+<<<<    NOT NULL Constraint   >>>>
+
+
+By default, a column can hold NULL values.
+
+
+If you do not want a column to have a NULL value,
+then you need to define such a constraint on this column
+specifying that NULL is now not allowed for that column.
+
+
+A NULL is not the same as no data, rather, it represents unknown data.
+
+
+Example
+For example, the following SQL query creates a new table called CUSTOMERS
+and adds five columns,
+three of which, are ID NAME and AGE,
+In this we specify not to accept NULLs −
+
+CREATE TABLE CUSTOMERS(
+   ID   INT              NOT NULL,
+   NAME VARCHAR (20)     NOT NULL,
+   AGE  INT              NOT NULL,
+   ADDRESS  CHAR (25) ,
+   SALARY   DECIMAL (18, 2),       
+   PRIMARY KEY (ID)
+);
+
+
+If CUSTOMERS table has already been created,
+then to add a NOT NULL constraint to the SALARY column in Oracle and MySQL,
+you would write a query like the one that is shown in the following code block.
+
+ALTER TABLE CUSTOMERS
+   MODIFY SALARY  DECIMAL (18, 2) NOT NULL;

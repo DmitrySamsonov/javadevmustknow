@@ -1,0 +1,16 @@
+Type 3: JDBC-Net pure Java
+
+
+In a Type 3 driver,
+a three-tier approach is used to access databases.
+
+The JDBC clients use standard network sockets to communicate with a middleware application server.
+
+The socket information is then translated by the middleware application server
+into the call format required by the DBMS,
+and forwarded to the database server.
+
+
+This kind of driver is extremely flexible,
+since it requires no code installed on the client
+and a single driver can actually provide access to multiple databases.

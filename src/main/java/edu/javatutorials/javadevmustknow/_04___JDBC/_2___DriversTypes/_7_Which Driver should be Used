@@ -1,0 +1,13 @@
+Which Driver should be Used?
+
+
+If you are accessing ONE TYPE of database, such as Oracle, Sybase, or IBM,
+the preferred driver type is 4.
+
+If your Java application is accessing MULTIPLE TYPES of databases at the same time,
+type 3 is the preferred driver.
+
+Type 2 drivers are useful in situations, where a type 3 or type 4 driver is not available yet for your database.
+
+The type 1 driver is not considered a deployment-level driver,
+and is typically used for DEVELOPMENT and TESTING purposes only.

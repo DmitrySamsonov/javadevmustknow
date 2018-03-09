@@ -1,0 +1,19 @@
+Type 4: 100% Pure Java
+
+
+In a Type 4 driver,
+a pure Java-based driver communicates directly with the vendor's database through socket connection.
+
+This is the highest performance driver available for the database
+and is usually provided by the vendor itself.
+
+
+This kind of driver is extremely flexible,
+you don't need to install special software on the client or server.
+Further, these drivers can be downloaded dynamically.
+
+
+MySQL's Connector/J driver is a Type 4 driver.
+
+Because of the proprietary nature of their network protocols,
+database vendors usually supply type 4 drivers.

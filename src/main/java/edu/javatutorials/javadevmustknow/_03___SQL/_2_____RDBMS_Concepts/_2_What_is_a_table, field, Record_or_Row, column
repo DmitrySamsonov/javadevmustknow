@@ -1,0 +1,66 @@
+What is a table?
+
+The data in an RDBMS is stored in database objects
+which are called as tables.
+
+This table is basically a collection of related data entries
+and it consists of numerous columns and rows.
+
+
+Remember, a table is the most common and simplest form of data storage in a relational database!
+
+The following program is an example of a CUSTOMERS table −
+
++----+----------+-----+-----------+----------+
+| ID | NAME     | AGE | ADDRESS   | SALARY   |
++----+----------+-----+-----------+----------+
+|  1 | Ramesh   |  32 | Ahmedabad |  2000.00 |
+|  2 | Khilan   |  25 | Delhi     |  1500.00 |
+|  3 | kaushik  |  23 | Kota      |  2000.00 |
+|  4 | Chaitali |  25 | Mumbai    |  6500.00 |
+|  5 | Hardik   |  27 | Bhopal    |  8500.00 |
+|  6 | Komal    |  22 | MP        |  4500.00 |
+|  7 | Muffy    |  24 | Indore    | 10000.00 |
++----+----------+-----+-----------+----------+
+
+________________________________________________________________________________________________________________________
+What is a field?
+
+A field is a column in a table
+that is designed to maintain specific information about every record in the table.
+
+Every table is broken up into smaller entities called fields.
+The fields in the CUSTOMERS table consist of ID, NAME, AGE, ADDRESS and SALARY.
+
+________________________________________________________________________________________________________________________
+What is a Record or a Row?
+
+A record is a horizontal entity in a table.
+
+A record is also called as a row of data is each individual entry that exists in a table.
+For example, there are 7 records in the above CUSTOMERS table. Following is a single row of data or record in the CUSTOMERS table −
+
++----+----------+-----+-----------+----------+
+|  1 | Ramesh   |  32 | Ahmedabad |  2000.00 |
++----+----------+-----+-----------+----------+
+
+________________________________________________________________________________________________________________________
+What is a column?
+
+A column is a vertical entity in a table
+that contains all information associated with a specific field in a table.
+
+For example, a column in the CUSTOMERS table is ADDRESS,
+which represents location description and would be as shown below −
+
++-----------+
+| ADDRESS   |
++-----------+
+| Ahmedabad |
+| Delhi     |
+| Kota      |
+| Mumbai    |
+| Bhopal    |
+| MP        |
+| Indore    |
++----+------+

@@ -1,0 +1,28 @@
+JDBC Architecture
+
+
+The JDBC API supports both two-tier and three-tier processing models for database access
+but in general, JDBC Architecture consists of two layers −
+
+
+JDBC API:
+    This provides the application-to-JDBC Manager connection.
+
+The JDBC API uses a driver manager and database-specific drivers
+to provide transparent connectivity to heterogeneous databases.
+
+
+
+JDBC Driver API:
+    This supports the JDBC Manager-to-Driver Connection.
+
+The JDBC driver manager ensures
+that the correct driver is used to access each data source.
+The driver manager is capable of supporting multiple concurrent drivers
+connected to multiple heterogeneous databases.
+
+
+
+jdbc-architecture.jpg  is the architectural diagram,
+which shows the location of the driver manager
+with respect to the JDBC drivers and the Java application −

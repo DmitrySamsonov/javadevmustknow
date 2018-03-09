@@ -1,0 +1,25 @@
+Proc of JDBC:
+
+
++ Clean and simple SQL processing
+
++ Good performance with large data
+
++ Very good for small applications
+
++ Simple syntax so easy to learn
+
+
+
+Cons of JDBC:
+
+
+- Complex if it is used in large projects
+
+- Large programming overhead
+
+- No encapsulation
+
+- Hard to implement MVC concept
+
+- Query is DBMS specific

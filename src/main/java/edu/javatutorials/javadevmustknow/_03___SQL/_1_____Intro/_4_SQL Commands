@@ -1,0 +1,45 @@
+SQL Commands
+
+The standard SQL commands to interact with relational databases are
+CREATE, SELECT, INSERT, UPDATE, DELETE and DROP.
+
+These commands can be classified into the following groups based on their nature −
+
+
+DDL - Data Definition Language
++-------+---------------+------------------------------------------------------------------------------+
+| Sr.No.| Command       | Description                                                                  |
++-------+---------------+------------------------------------------------------------------------------+
+|  1	|    CREATE     |  Creates a new table, a view of a table, or other object in the database.    |
++-------+---------------+------------------------------------------------------------------------------+
+|  2    |    ALTER      |  Modifies an existing database object, such as a table.                      |
++-------+---------------+------------------------------------------------------------------------------+
+|  3    |    DROP       |  Deletes an entire table, a view of a table or other objects in the database.|
++-------+---------------+------------------------------------------------------------------------------+
+
+
+
+DML - Data Manipulation Language
+
++--------+---------------+--------------------------------------------------------+
+| Sr.No. | Command       | Description                                            |
++--------+---------------+--------------------------------------------------------+
+|  1	 |    SELECT     |  Retrieves certain records from one or more tables.    |
++--------+---------------+--------------------------------------------------------+
+|  2     |    INSERT     |  Creates a record.                                     |
++--------+---------------+--------------------------------------------------------+
+|  3     |    UPDATE     |  Modifies records.                                     |
++--------+---------------+--------------------------------------------------------+
+|  4     |    DELETE     |  Deletes records.                                      |
++--------+---------------+--------------------------------------------------------+
+
+
+
+DCL - Data Control Language
++--------+---------------+-------------------------------------------+
+| Sr.No. | Command       | Description                               |
++--------+---------------+-------------------------------------------+
+| 1	     |    GRANT      |  Gives a privilege to user.               |
++--------+---------------+-------------------------------------------+
+| 2      |    REVOKE     |  Takes back privileges granted from user. |
++--------+---------------+-------------------------------------------+

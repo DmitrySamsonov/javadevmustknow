@@ -1,0 +1,7 @@
+JDBC Drivers Types
+
+JDBC driver implementations vary
+because of the wide variety of operating systems
+and hardware platforms in which Java operates.
+
+Sun has divided the implementation types into four categories, Types 1, 2, 3, and 4

@@ -1,0 +1,14 @@
+Java ORM Frameworks
+
+There are several persistent frameworks and ORM options in Java.
+
+A persistent framework is an ORM service
+that stores and retrieves objects into a relational database.
+
+• Enterprise JavaBeans Entity Beans
+• Java Data Objects
+• Castor
+• TopLink
+• Spring DAO
+• Hibernate
+• And many more
