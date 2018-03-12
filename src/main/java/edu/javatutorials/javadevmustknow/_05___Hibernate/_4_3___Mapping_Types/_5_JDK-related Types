@@ -1,0 +1,9 @@
+JDK-related Types
+
+
+|Mapping type (Hibernate)	|Java type	            |ANSI SQL Type  |
++---------------------------+-----------------------+---------------+
+|class	                    |java.lang.Class        |VARCHAR        |
+|locale	                    |java.util.Locale       |VARCHAR        |
+|timezone	                |java.util.TimeZone     |VARCHAR        |
+|currency	                |java.util.Currency     |VARCHAR        |

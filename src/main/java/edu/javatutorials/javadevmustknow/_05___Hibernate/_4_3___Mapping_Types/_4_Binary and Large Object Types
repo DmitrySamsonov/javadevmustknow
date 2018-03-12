@@ -1,0 +1,10 @@
+Binary and Large Object Types
+
+
+|Mapping type (Hibernate)	|Java type	                                            |ANSI SQL Type          |
++---------------------------+-------------------------------------------------------+-----------------------+
+|binary	                    |byte[]	                                                |VARBINARY (or BLOB)    |
+|text	                    |java.lang.String	                                    |CLOB                   |
+|serializable               |any Java class that implements java.io.Serializable	|VARBINARY (or BLOB)    |
+|clob	                    |java.sql.Clob	                                        |CLOB                   |
+|blob	                    |java.sql.Blob	                                        |BLOB                   |

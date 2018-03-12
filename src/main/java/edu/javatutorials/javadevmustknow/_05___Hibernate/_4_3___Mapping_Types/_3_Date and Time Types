@@ -1,0 +1,10 @@
+Date and Time Types
+
+
+|Mapping type (Hibernate)	|  Java type                            |ANSI SQL Type  |
++---------------------------+---------------------------------------+---------------+
+|date	                    |java.util.Date or java.sql.Date	    |DATE           |
+|time	                    |java.util.Date or java.sql.Time	    |TIME           |
+|timestamp	                |java.util.Date or java.sql.Timestamp	|TIMESTAMP      |
+|calendar	                |java.util.Calendar	                    |TIMESTAMP      |
+|calendar_date              |java.util.Calendar	                    |DATE           |
