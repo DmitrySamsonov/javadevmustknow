@@ -6,10 +6,10 @@ public class Product {
     private final String name;
     private final String category;
 
-    public Product(String id, String name, String type) {
+    public Product(String id, String name, String category) {
         this.id = id;
         this.name = name;
-        this.category = type;
+        this.category = category;
     }
 
     public String getId() {

@@ -1,0 +1,9 @@
+Query Object
+
+
+Query objects use SQL or Hibernate Query Language (HQL) string
+to retrieve data from the database and create objects.
+
+A Query instance is used to bind query parameters,
+limit the number of results returned by the query,
+and finally to execute the query.

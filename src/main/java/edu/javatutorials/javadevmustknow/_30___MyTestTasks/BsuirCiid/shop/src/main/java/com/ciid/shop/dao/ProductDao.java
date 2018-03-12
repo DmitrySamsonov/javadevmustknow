@@ -17,39 +17,24 @@ public class ProductDao {
     public void insertProduct(){
 
     }
-    public void insertCategory(){
+
+    public void updateById(){
+
+    }
+    public void updateByName(){
 
     }
 
-    public void updateProductById(){
+    public void deleteById(){
 
     }
-    public void updateProductByName(){
-
-    }
-
-    public void deleteProductById(){
-
-    }
-    public void deleteProductByName(){
+    public void deleteByName(){
 
     }
 
 
 
-    public void updateCategoryById(){
 
-    }
-    public void updateCategoryByName(){
-
-    }
-
-    public void deleteCategoryById(){
-
-    }
-    public void deleteCategoryByName(){
-
-    }
 
 
 

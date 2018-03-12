@@ -1,15 +1,15 @@
-Consider the Java Class Employee with proper constructors and associated public function −
+Consider the Java Class edu.javatutorials.javadevmustknow._05___Hibernate._4_2___XML_Mapping.Employee with proper constructors and associated public function −
 
-public class Employee {
+public class edu.javatutorials.javadevmustknow._05___Hibernate._4_2___XML_Mapping.Employee {
     private int id;
     private String first_name;
     private String last_name;
     private int salary;
 
-    public Employee() {
+    public edu.javatutorials.javadevmustknow._05___Hibernate._4_2___XML_Mapping.Employee() {
     }
 
-    public Employee(String fname, String lname, int salary) {
+    public edu.javatutorials.javadevmustknow._05___Hibernate._4_2___XML_Mapping.Employee(String fname, String lname, int salary) {
         this.first_name = fname;
         this.last_name = lname;
         this.salary = salary;
@@ -32,7 +32,7 @@ public class Employee {
     }
 }
 
-objects of Java Class Employee are to be stored and retrieved into the following RDBMS table −
+objects of Java Class edu.javatutorials.javadevmustknow._05___Hibernate._4_2___XML_Mapping.Employee are to be stored and retrieved into the following RDBMS table −
 
 create table EMPLOYEE (
    id INT NOT NULL auto_increment,

@@ -1,0 +1,567 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<!--
+Hibernate requires to know in advance — where to find the mapping information that defines
+how your Java classes relate to the database tables.
+
+Hibernate also requires a set of configuration settings related to database and other related parameters.
+
+All such information is usually supplied as a standard Java properties file
+called hibernate.properties, or as an XML file named hibernate.cfg.xml.
+
+Most of the properties take their default values
+and it is not required to specify them in the property file unless it is really required.
+
+This file is kept in the root directory of your application's classpath.
+-->
+
+<hibernate-configuration>
+    <session-factory
+            name="java:hibernate/SessionFactory">
+
+        <!--••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
+        <!--<<<<    HIBERNATE JDBC PROPERTIES     >>>>-->
+        <!--••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
+
+        <property name="hibernate.connection.driver_class">
+            com.mysql.jdbc.Driver
+        </property>
+        <!--
+        The JDBC driver class.
+        -->
+
+
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost/test                                 <!--test is the database name-->
+        </property>
+        <!--
+        The JDBC URL to the database instance.
+        -->
+
+
+        <property name="hibernate.connection.username">
+            root
+        </property>
+        <!--
+        The database username.
+        -->
+
+
+        <property name="hibernate.connection.password">
+            root
+        </property>
+        <!--
+        The database password.
+        -->
+
+
+        <property name="hibernate.connection.pool_size">
+            1
+        </property>
+        <!--
+        maximum number of pooled connections
+        -->
+
+
+        <!-- List of XML mapping files -->
+        <mapping resource="Employee.hbm.xml"/>
+        <!--
+        <mapping> tags are related to hibernatemapping file
+        -->
+
+
+        <!--•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
+        <!--<<<<     HIBERNATE C3P0 PROPERTIES    >>>>-->
+        <!--•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
+        <!--
+        C3P0 is an open source JDBC connection pool distributed along with Hibernate in the lib directory.
+        Hibernate will use its org.hibernate.connection.C3P0ConnectionProvider
+        for connection pooling if you set hibernate.c3p0.* properties.
+        If you would like to use Proxool, refer to the packaged hibernate.properties
+        and the Hibernate web site for more information.
+        -->
+
+
+        <property name="hibernate.c3p0.min_size">
+            5
+        </property>
+        <!--
+        -->
+
+
+        <property name="hibernate.c3p0.max_size">
+            200
+        </property>
+        <!--
+        -->
+
+
+        <property name="hibernate.c3p0.timeout">
+            1800
+        </property>
+        <!--
+        -->
+
+
+        <property name="hibernate.c3p0.max_statements">
+            50
+        </property>
+        <!--
+        -->
+
+
+        <property name="hibernate.c3p0.acquire_increment">
+            99<!--???-->
+        </property>
+        <!--
+        -->
+
+
+        <property name="hibernate.c3p0.idle_test_period">
+            10<!--???-->
+        </property>
+        <!--
+        -->
+
+
+        <!--•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
+        <!--<<<<     HIBERNATE Datasource PROPERTIES    >>>>-->
+        <!--•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
+
+        <property name="hibernate.connection.datasource">
+            java:/comp/env/jdbc/test
+        </property>
+        <!--
+        datasource JNDI name
+        -->
+
+
+        <property name="hibernate.jndi.url">
+            <!--???-->
+        </property>
+        <!--
+        URL of the JNDI provider (optional)
+        -->
+
+
+        <property name="hibernate.jndi.class">
+            <!--???-->
+        </property>
+        <!--
+        class of the JNDI InitialContextFactory (optional)
+        -->
+
+
+        <!--••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
+        <!--<<<<      HIBERNATE CONFIGURATION PROPERTIES     >>>>-->
+        <!--••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
+
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQLDialect               <!--e.g. full.classname.of.Dialect-->
+        </property>
+        <!--This property makes Hibernate generate the appropriate SQL for the chosen database.-->
+        <!--
+        The classname of a Hibernate org.hibernate.dialect.Dialect
+        which allows Hibernate to generate SQL optimized for a particular relational database.
+
+        In most cases Hibernate will actually be able to choose the correct org.hibernate.dialect.Dialect implementation
+        based on the JDBC metadata returned by the JDBC driver.
+
+        e.g. full.classname.of.Dialect
+        -->
+
+
+        <property name="hibernate.show_sql">
+            true                                     <!--e.g. true | false-->
+        </property>
+        <!--
+        Write all SQL statements to console.
+        This is an alternative to setting the log category org.hibernate.SQL to debug.
+        -->
+
+
+        <property name="hibernate.format_sql">
+            true                                     <!--e.g. true | false-->
+        </property>
+        <!--
+        Pretty print the SQL in the log and console.
+        -->
+
+
+        <property name="hibernate.default_schema">
+            DEFAULT_SCHEMA_NAME                         <!--e.g. SCHEMA_NAME-->
+        </property>
+        <!--
+        Qualify unqualified table names with the given schema/tablespace in generated SQL.
+        -->
+
+
+        <property name="hibernate.default_catalog">
+            default_catalog_name                        <!--e.g. CATALOG_NAME-->
+        </property>
+        <!--
+        Qualifies unqualified table names with the given catalog in generated SQL.
+        -->
+
+
+        <property name="hibernate.session_factory_name">
+            jndi/composite/name                <!--e.g. jndi/composite/name-->
+        </property>
+        <!--
+        The org.hibernate.SessionFactory will be automatically bound to this name in JNDI after it has been created.
+        -->
+
+
+        <property name="hibernate.max_fetch_depth">
+            0                                          <!--e.g. recommended values between 0 and 3-->
+        </property>
+        <!--
+        Sets a maximum "depth" for the outer join fetch tree
+        for single-ended associations (one-to-one, many-to-one).
+
+        A 0 disables default outer join fetching.
+        -->
+
+
+        <property name="hibernate.default_batch_fetch_size">
+            8                                                 <!-- e.g. recommended values 4, 8, 16-->
+        </property>
+        <!--
+        Sets a default size for Hibernate batch fetching of associations.
+        -->
+
+
+        <property name="hibernate.default_entity_mode">
+            pojo                                         <!--e.g. pojo | dom4j | dynamic-map-->
+        </property>
+        <!--
+        Sets a default mode for entity representation for all sessions
+        opened from this SessionFactory
+        -->
+
+
+        <property name="hibernate.order_updates">
+            true                                    <!--e.g. true | false-->
+        </property>
+        <!--
+        Forces Hibernate to order SQL updates by the primary key value of the items being updated.
+        This will result in fewer transaction deadlocks in highly concurrent systems.
+        -->
+
+
+        <property name="hibernate.generate_statistics">
+            true                                              <!-- e.g. true | false-->
+        </property>
+        <!--
+        If enabled, Hibernate will collect statistics useful for performance tuning.
+        -->
+
+        <property name="hibernate.use_identifier_rollback">
+            true                                                <!-- e.g. true | false-->
+        </property>
+        <!--
+        If enabled, generated identifier properties will be reset to default values when objects are deleted.
+        -->
+
+
+        <property name="hibernate.use_sql_comments">
+            true                                               <!--e.g. true | false-->
+        </property>
+        <!--
+        If turned on, Hibernate will generate comments inside the SQL, for easier debugging, defaults to false.
+        -->
+
+
+        <!--•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
+        <!--<<<<    HIBERNATE JDBC AND CONNECTION PROPERTIES    >>>>-->
+        <!--•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
+
+
+        <property name="hibernate.jdbc.fetch_size">
+            100
+        </property>
+        <!--
+        A non-zero value determines the JDBC fetch size (calls Statement.setFetchSize()).
+        -->
+
+
+        <property name="hibernate.jdbc.batch_size">
+            10                                       <!--e.g. recommended values between 5 and 30-->
+        </property>
+        <!--
+        A non-zero value enables use of JDBC2 batch updates by Hibernate.
+        -->
+
+
+        <property name="hibernate.jdbc.batch_versioned_data">
+            false                                               <!--e.g. true | false-->
+        </property>
+        <!--
+        Set this property to true if your JDBC driver returns correct row counts from executeBatch().
+        Iit is usually safe to turn this option on.
+        Hibernate will then use batched DML for automatically versioned data.
+        Defaults to false.
+        -->
+
+
+        <property name="hibernate.jdbc.factory_class">
+            classname.of.BatcherFactory                  <!--e.g. classname.of.BatcherFactory-->
+        </property>
+        <!--
+        Select a custom org.hibernate.jdbc.Batcher.
+        Most applications will not need this configuration property.
+        -->
+
+
+        <property name="hibernate.jdbc.use_scrollable_resultset">
+            true                                                   <!--e.g. true | false-->
+        </property>
+        <!--
+        Enables use of JDBC2 scrollable resultsets by Hibernate.
+        This property is only necessary when using user-supplied JDBC connections.
+        Hibernate uses connection metadata otherwise.
+        -->
+
+
+        <property name="hibernate.jdbc.use_streams_for_binary">
+            true                                                  <!--e.g. true | false-->
+        </property>
+        <!--
+        Use streams when writing/reading binary or serializable types to/from JDBC.
+        *system-level property*
+        -->
+
+
+        <property name="hibernate.jdbc.use_get_generated_keys">
+            true                                                    <!--e.g. true|false-->
+        </property>
+        <!--
+        Enables use of JDBC3 PreparedStatement.getGeneratedKeys() to retrieve natively generated keys after insert.
+        Requires JDBC3+ driver and JRE1.4+,
+        set to false if your driver has problems with the Hibernate identifier generators.
+        By default, it tries to determine the driver capabilities using connection metadata.
+        -->
+
+
+        <property name="hibernate.connection.provider_class">
+            classname.of.ConnectionProvider                    <!--e.g. classname.of.ConnectionProvider-->
+        </property>
+        <!--
+        The classname of a custom org.hibernate.connection.
+        ConnectionProvider which provides JDBC connections to Hibernate.
+        -->
+
+
+        <property name="hibernate.connection.isolation">
+            1                                            <!--e.g. 1, 2, 4, 8-->
+        </property>
+        <!--
+        Sets the JDBC transaction isolation level.
+        Check java.sql.Connection for meaningful values,
+        but note that most databases do not support all isolation levels
+        and some define additional, non-standard isolations.
+        -->
+
+
+        <property name="hibernate.connection.autocommit">
+            false                                                    <!--e.g. true|false-->
+        </property>
+        <!--
+        Enables autocommit for JDBC pooled connections (it is not recommended).
+        -->
+
+
+        <property name="hibernate.connection.release_mode">
+            auto                             <!--e.g. auto (default) | on_close | after_transaction | after_statement-->
+        </property>
+        <!--
+        Specifies when Hibernate should release JDBC connections.
+        By default, a JDBC connection is held until the session is explicitly closed or disconnected.
+        For an application server JTA datasource,
+        use after_statement to aggressively release connections after every JDBC call.
+        For a non-JTA connection, it often makes sense to release the connection at the end of each transaction,
+        by using after_transaction.
+
+        auto will choose after_statement for the JTA and CMT transaction strategies
+        and after_transaction for the JDBC transaction strategy.
+
+        This setting only affects Sessions returned from SessionFactory.openSession.
+        For Sessions obtained through SessionFactory.getCurrentSession,
+        the CurrentSessionContext implementation configured
+        for use controls the connection release mode for those Sessions. see “Contextual sessions”
+        -->
+
+
+        <!--•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
+        <!--<<<<    HIBERNATE CACHE PROPERTIES    >>>>-->
+        <!--•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
+
+        <property name="hibernate.cache.provider_class">
+            classname.of.CacheProvider                    <!--e.g. classname.of.CacheProvider-->
+        </property>
+        <!--
+        The classname of a custom CacheProvider.
+        -->
+
+        <property name="hibernate.cache.use_minimal_puts">
+            true                                            <!--e.g. true|false-->
+        </property>
+        <!--
+        Optimizes second-level cache operation to minimize writes, at the cost of more frequent reads.
+        This setting is most useful for clustered caches
+        and, in Hibernate3, is enabled by default for clustered cache implementations.
+        -->
+
+
+        <property name="hibernate.cache.use_query_cache">
+            true                                           <!-- e.g. true|false-->
+        </property>
+        <!--
+        Enables the query cache. Individual queries still have to be set cachable.
+        -->
+
+
+        <property name="hibernate.cache.use_second_level_cache">
+            false                                                 <!--e.g. true|false-->
+        </property>
+        <!--
+        Can be used to completely disable the second level cache,
+        which is enabled by default for classes which specify a <cache> mapping.
+        -->
+
+
+        <property name="hibernate.cache.query_cache_factory">
+            classname.of.QueryCache                             <!--e.g. classname.of.QueryCache-->
+        </property>
+        <!--
+        The classname of a custom QueryCache interface, defaults to the built-in StandardQueryCache.
+        -->
+
+
+        <property name="hibernate.cache.region_prefix">
+            prefix                                         <!--e.g. prefix-->
+        </property>
+        <!--
+        A prefix to use for second-level cache region names.
+        -->
+
+
+        <property name="hibernate.cache.use_structured_entries">
+            false                                                 <!--e.g. true|false-->
+        </property>
+        <!--
+        Forces Hibernate to store data in the second-level cache in a more human-friendly format.
+        -->
+
+
+        <!--•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
+        <!--<<<<    HIBERNATE TRANSACTION PROPERTIES    >>>>-->
+        <!--•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
+
+
+        <property name="hibernate.transaction.factory_class">
+            classname.of.TransactionFactory                        <!--e.g. classname.of.TransactionFactory-->
+        </property>
+        <!--
+        The classname of a TransactionFactory
+        to use with Hibernate Transaction API (defaults to JDBCTransactionFactory).
+        -->
+
+
+        <property name="jta.UserTransaction">
+            jndi/composite/name                                    <!-- e.g. jndi/composite/name-->
+        </property>
+        <!--
+        A JNDI name used by JTATransactionFactory
+        to obtain the JTA UserTransaction from the application server.
+        -->
+
+
+        <property name="hibernate.transaction.manager_lookup_class">
+            classname.of.TransactionManagerLookup                   <!--e.g. classname.of.TransactionManagerLookup-->
+        </property>
+        <!--
+        The classname of a TransactionManagerLookup.
+        It is required when JVM-level caching is enabled
+        or when using hilo generator in a JTA environment.
+        -->
+
+
+        <property name="hibernate.transaction.flush_before_completion">
+            true                                                        <!--e.g. true | false-->
+        </property>
+        <!--
+        If enabled, the session will be automatically flushed
+        during the before completion phase of the transaction.
+        Built-in and automatic session context management is preferred,
+        see  “Contextual sessions”.
+        -->
+
+
+        <property name="hibernate.transaction.auto_close_session">
+            true                                                        <!--e.g. true | false-->
+        </property>
+        <!--
+        If enabled, the session will be automatically closed
+        during the after completion phase of the transaction.
+        Built-in and automatic session context management is preferred, see “Contextual sessions”.
+        -->
+
+
+        <!--••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
+        <!--<<<<    HIBERNATE MISCELLANEOUS PROPERTIES    >>>>-->
+        <!--••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
+
+
+        <property name="hibernate.current_session_context_class">
+            jta                                                  <!-- e.g. jta | thread | managed | custom.Class-->
+        </property>
+        <!--
+        Supply a custom strategy for the scoping of the "current" Session.
+        -->
+
+
+        <property name="hibernate.query.factory_class">
+            org.hibernate.hql.ast.ASTQueryTranslatorFactory  <!--e.g. org.hibernate.hql.ast.ASTQueryTranslatorFactory -->
+        </property>                                     <!--or org.hibernate.hql.classic.ClassicQueryTranslatorFactory-->
+        <!--
+        Chooses the HQL parser implementation.
+        -->
+
+
+        <property name="hibernate.query.substitutions">
+            hqlLiteral=SQL_LITERAL, hqlFunction=SQLFUNC  <!--e.g. hqlLiteral=SQL_LITERAL, hqlFunction=SQLFUNC  -->
+        </property>
+        <!--
+        Is used to map from tokens in Hibernate queries to SQL tokens
+        (tokens might be function or literal names, for example).
+        -->
+
+
+        <property name="hibernate.hbm2ddl.auto">
+            update                                  <!--e.g. validate | update | create | create-drop -->
+        </property>
+        <!--
+        Automatically validates or exports schema DDL to the database
+        when the SessionFactory is created.
+        With create-drop, the database schema will be dropped
+        when the SessionFactory is closed explicitly.
+        -->
+
+
+        <property name="hibernate.cglib.use_reflection_optimizer">
+            true                                                    <!--e.g. true | false -->
+        </property>
+        <!--
+        Enables the use of CGLIB instead of runtime reflection (System-level property).
+        Reflection can sometimes be useful when troubleshooting.
+        Hibernate always requires CGLIB even if you turn off the optimizer.
+        You cannot set this property in hibernate.cfg.xml.
+        -->
+
+
+    </session-factory>
+</hibernate-configuration>

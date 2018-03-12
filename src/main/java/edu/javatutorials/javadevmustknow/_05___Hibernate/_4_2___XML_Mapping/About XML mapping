@@ -1,0 +1,17 @@
+About XML mapping
+
+
+An Object/relational mappings are usually defined in an XML document.
+
+This mapping file instructs Hibernate —
+how to map the defined class or classes to the database tables?
+
+
+Though many Hibernate users choose to write the XML by hand,
+but a number of tools exist to generate the mapping document.
+These include XDoclet, Middlegen and AndroMDA for the advanced Hibernate users.
+
+--------------------------------------------------------------------------------
+
+Let us consider Employee POJO class
+whose objects will persist in the table.

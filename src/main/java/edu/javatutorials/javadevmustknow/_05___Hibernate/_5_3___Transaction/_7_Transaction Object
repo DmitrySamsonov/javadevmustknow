@@ -1,0 +1,12 @@
+Transaction Object
+
+
+A Transaction represents a unit of work with the database
+and most of the RDBMS supports transaction functionality.
+
+Transactions in Hibernate are handled by
+an underlying transaction manager and transaction (from JDBC or JTA).
+
+This is an optional object
+and Hibernate applications may choose not to use this interface,
+instead managing transactions in their own application code.

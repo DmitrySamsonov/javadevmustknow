@@ -13,7 +13,7 @@ import java.util.List;
 public class ProductController {
 
     @Autowired
-    private ProductService shopService;
+    private ProductService productService;
 
     @RequestMapping("/")
     public String startPage() {
@@ -23,7 +23,7 @@ public class ProductController {
     @ResponseBody
     @RequestMapping("/api/getAllProducts")
     public List<Product> getProductList() {
-        return shopService.findAll();
+        return productService.findAll();
     }
 
 

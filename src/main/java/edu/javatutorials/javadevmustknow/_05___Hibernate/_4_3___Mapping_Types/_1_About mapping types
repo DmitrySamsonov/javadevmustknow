@@ -1,0 +1,13 @@
+About mapping types
+
+
+When you prepare a Hibernate mapping document, you find
+that you map the Java data types into RDBMS data types.
+
+The types declared and used in the mapping files
+are not Java data types;
+they are not SQL database types either.
+
+
+These types are called Hibernate mapping types, which can translate from Java to SQL data types and vice versa.
+
