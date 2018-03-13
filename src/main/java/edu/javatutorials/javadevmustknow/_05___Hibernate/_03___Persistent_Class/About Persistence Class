@@ -1,0 +1,35 @@
+Persistence Class
+
+
+The entire concept of Hibernate is
+to take the values from Java class attributes and persist them to a database table.
+
+A mapping document helps Hibernate in determining
+how to pull the values from the classes and map them with table and associated fields.
+
+Java classes whose objects or instances will be stored in database tables
+are called persistent classes in Hibernate.
+
+Hibernate works best if these classes follow some simple rules,
+also known as the Plain Old Java Object (POJO) programming model.
+
+
+There are following main rules of persistent classes, however, none of these rules are hard requirements −
+
+1.  All Java classes that will be persisted need a default constructor.
+
+2.  All classes should contain an ID
+    in order to allow easy identification of your objects within Hibernate and the database.
+    This property maps to the primary key column of a database table.
+
+3.  All attributes that will be persisted should be declared private
+    and have getXXX and setXXX methods defined in the JavaBean style.
+
+4.  A central feature of Hibernate, proxies, depends upon the persistent class being either non-final,
+    or the implementation of an interface that declares all public methods.
+
+5.  All classes that do not extend or implement some specialized classes and interfaces required by the EJB framework.
+
+
+The POJO name is used to emphasize that a given object is an ordinary Java Object, 
+not a special object, and in particular not an Enterprise JavaBean.

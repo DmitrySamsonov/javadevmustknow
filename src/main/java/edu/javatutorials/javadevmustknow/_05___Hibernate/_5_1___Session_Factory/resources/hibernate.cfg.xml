@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+
+        <property name="hibernate.connection.driver_class">
+            com.mysql.jdbc.Driver
+        </property>
+        <!--
+        The JDBC driver class.
+        -->
+
+
+        <property name="hibernate.connection.url">
+            <!--jdbc:mysql://localhost/my_local_mysql_db?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC-->
+            jdbc:mysql://localhost/my_local_mysql_db
+        </property>
+        <!--
+        The JDBC URL to the database instance.
+        -->
+
+
+        <property name="hibernate.connection.username">
+            root
+        </property>
+        <!--
+        The database username.
+        -->
+
+
+        <property name="hibernate.connection.password">
+            root
+        </property>
+        <!--
+        The database password.
+        -->
+
+
+        <!-- XML mapping files -->
+        <mapping resource="Employee.hbm.xml"/>
+        <!--
+        <mapping> tags are related to hibernatemapping file
+        -->
+
+    </session-factory>
+</hibernate-configuration>

@@ -32,30 +32,34 @@ public class CreateConfiguration {
     private static void start() {
 
         Configuration configuration = new Configuration();
+        /**
+         * By default configuration find hibernate.properties file
+         */
+
+        configuration.configure("edu/javatutorials/javadevmustknow/_05___Hibernate/_4_5___Configuration/hibernate.cfg.xml");
 
         /*
-            If the mapping files are in the classpath, use addResource()
-            for specifying XML mapping documents
+        If the mapping files are in the classpath, use addResource()
+        for specifying XML mapping documents
         */
         configuration
-                .addResource("Person.hbm.xml")
-                .addResource("Car.gbm.xml");
+//                .addResource("Person.hbm.xml")
+                .addResource("edu/javatutorials/javadevmustknow/_05___Hibernate/_4_5___Configuration/Employee.hbm.xml");
 
         /*
-            Also you can to specify the mapped class and allow Hibernate to find the mapping document for you.
+        Also you can to specify the mapped class and allow Hibernate to find the mapping document for you.
 
-            Hibernate will then search for mapping files
-            named /org/hibernate/auction/Person.hbm.xml and /org/hibernate/auction/Car.hbm.xml in the classpath.
+        Hibernate will then search for mapping files
+        named /org/hibernate/auction/Person.hbm.xml and /org/hibernate/auction/Car.hbm.xml in the classpath.
 
-            This approach eliminates any hardcoded filenames.
+        This approach eliminates any hardcoded filenames.
         */
-//TODO        configuration
-//TODO                .addClass(org.hibernate.auction.Person.class)
-//TODO                .addClass(org.hibernate.auction.Car.class);
-
+        configuration
+//                .addClass(org.hibernate.auction.Car.class)
+                .addClass(edu.javatutorials.javadevmustknow._05___Hibernate._4_5___Configuration.Employee.class);
 
         /*
-            Also you can specify configuration properties manually
+        Also you can specify configuration properties manually
         */
         configuration
                 .setProperty("hibernate.connection.driver_class", "com.mysql.jdbc.Driver")
@@ -64,7 +68,7 @@ public class CreateConfiguration {
                 .setProperty("hibernate.connection.password","root");
 
         /*
-            Or you can Load properties from instance of java.util.Properties
+        Or you can Load properties from instance of java.util.Properties
         */
         Properties properties = new Properties();
         configuration

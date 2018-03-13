@@ -1,0 +1,20 @@
+Hibernate annotations
+
+
+So far you have seen how
+Hibernate uses XML mapping file for the transformation of data
+from POJO to database tables and vice versa.
+
+Hibernate annotations are the newest way to define mappings without the use of XML file.
+You can use annotations in addition to or as a replacement of XML mapping metadata.
+
+
+Hibernate Annotations is the powerful way to provide the metadata for the Object and Relational Table mapping.
+All the metadata is clubbed into the POJO_java_file along with the code,
+this helps the user to understand the table structure and POJO simultaneously during the development.
+
+
+If you going to make your application portable to other EJB 3 compliant ORM applications,
+you must use annotations to represent the mapping information,
+but still if you want greater flexibility,
+then you should go with XML-based mappings.
