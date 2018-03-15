@@ -39,7 +39,7 @@ DCL - Data Control Language
 +--------+---------------+-------------------------------------------+
 | Sr.No. | Command       | Description                               |
 +--------+---------------+-------------------------------------------+
-| 1	     |    GRANT      |  Gives a privilege to user.               |
+| 1	     |    GRANT      |  Gives a privilege to person.               |
 +--------+---------------+-------------------------------------------+
-| 2      |    REVOKE     |  Takes back privileges granted from user. |
+| 2      |    REVOKE     |  Takes back privileges granted from person. |
 +--------+---------------+-------------------------------------------+

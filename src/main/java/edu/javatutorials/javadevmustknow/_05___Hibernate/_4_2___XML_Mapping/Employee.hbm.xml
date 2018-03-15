@@ -56,7 +56,7 @@ which contains all the <class> elements.
         The type="" attribute holds the hibernate mapping type,
         this mapping types will convert from Java to SQL data type.
         -->
-        <property name="firstName" column="first_name" type="string"/>
+        <property name="name" column="first_name" type="string"/>
         <property name="lastName" column="last_name" type="string"/>
         <property name="salary" column="salary" type="int"/>
 

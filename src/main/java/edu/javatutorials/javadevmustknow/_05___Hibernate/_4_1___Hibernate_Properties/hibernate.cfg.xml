@@ -314,7 +314,7 @@ This file is kept in the root directory of your application's classpath.
         </property>
         <!--
         Enables use of JDBC2 scrollable resultsets by Hibernate.
-        This property is only necessary when using user-supplied JDBC connections.
+        This property is only necessary when using person-supplied JDBC connections.
         Hibernate uses connection metadata otherwise.
         -->
 
@@ -510,7 +510,7 @@ This file is kept in the root directory of your application's classpath.
 
 
         <property name="hibernate.current_session_context_class">
-            jta                                                  <!-- e.g. jta | thread | managed | custom.Class-->
+            jta                                                  <!-- e.g. jta | thread | managed | custom.charAt_Example-->
         </property>
         <!--
         Supply a custom strategy for the scoping of the "current" Session.

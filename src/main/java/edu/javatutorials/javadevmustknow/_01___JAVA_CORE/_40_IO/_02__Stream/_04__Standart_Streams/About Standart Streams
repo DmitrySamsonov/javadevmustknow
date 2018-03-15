@@ -1,0 +1,24 @@
+Standard Streams
+
+
+All the programming languages provide support for standard I/O
+where the person's program can take input from a keyboard and then produce an output on the computer screen.
+
+If you are aware of C or C++ programming languages,
+then you must be aware of three standard devices STDIN, STDOUT and STDERR.
+
+
+Similarly, Java provides the following three standard streams −
+
+1.      Standard Input  −   This is used to feed the data to person's program
+                            and usually a keyboard is used as standard input stream
+                            and represented as System.in.
+
+2.      Standard Output −   This is used to output the data produced by the person's program
+                            and usually a computer screen is used for standard output stream
+                            and represented as System.out.
+
+3.      Standard Error  −   This is used to output the error data
+                            produced by the person's program
+                            and usually a computer screen is used for standard error stream
+                            and represented as System.err.

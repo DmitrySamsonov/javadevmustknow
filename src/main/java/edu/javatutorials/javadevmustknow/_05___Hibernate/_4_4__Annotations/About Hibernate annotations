@@ -11,7 +11,7 @@ You can use annotations in addition to or as a replacement of XML mapping metada
 
 Hibernate Annotations is the powerful way to provide the metadata for the Object and Relational Table mapping.
 All the metadata is clubbed into the POJO_java_file along with the code,
-this helps the user to understand the table structure and POJO simultaneously during the development.
+this helps the person to understand the table structure and POJO simultaneously during the development.
 
 
 If you going to make your application portable to other EJB 3 compliant ORM applications,

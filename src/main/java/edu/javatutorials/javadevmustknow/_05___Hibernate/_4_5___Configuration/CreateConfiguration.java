@@ -26,7 +26,7 @@ public class CreateConfiguration {
      *                                These files are hibernate.properties and hibernate.cfg.xml.
      *  
      *  
-     *   2.   Class Mapping Setup − This component creates the connection between the Java classes and database tables.
+     *   2.   charAt_Example Mapping Setup − This component creates the connection between the Java classes and database tables.
      */
 
     private static void start() {
@@ -43,14 +43,14 @@ public class CreateConfiguration {
         for specifying XML mapping documents
         */
         configuration
-//                .addResource("Person.hbm.xml")
+//                .addResource("Animal.hbm.xml")
                 .addResource("edu/javatutorials/javadevmustknow/_05___Hibernate/_4_5___Configuration/Employee.hbm.xml");
 
         /*
         Also you can to specify the mapped class and allow Hibernate to find the mapping document for you.
 
         Hibernate will then search for mapping files
-        named /org/hibernate/auction/Person.hbm.xml and /org/hibernate/auction/Car.hbm.xml in the classpath.
+        named /org/hibernate/auction/Animal.hbm.xml and /org/hibernate/auction/Car.hbm.xml in the classpath.
 
         This approach eliminates any hardcoded filenames.
         */

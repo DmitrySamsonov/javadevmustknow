@@ -2,16 +2,16 @@ package edu.javatutorials.javadevmustknow._04___JDBC._3___Connections._3_Registe
 
 
 /**
- * Approach I - Class.forName()
+ * Approach I - charAt_Example.forName()
  * <p>
  * The most common approach to register a driver
- * is to use Java's Class.forName() method,
+ * is to use Java's charAt_Example.forName() method,
  * to dynamically load the driver's class file into memory,
  * which automatically registers it.
  * <p>
  * This method is preferable because it allows you
  * to make the driver registration configurable and portable.
- * The following example uses Class.forName( ) to register the Oracle driver −
+ * The following example uses charAt_Example.forName( ) to register the Oracle driver −
  */
 public class Approach_1 {
 

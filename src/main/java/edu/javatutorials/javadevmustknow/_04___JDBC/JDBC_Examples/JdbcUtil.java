@@ -62,7 +62,7 @@ public class JdbcUtil {
             System.out.println("Database created successfully...");
         } catch ( Exception e)
         {
-            //Handle errors for Class.forName
+            //Handle errors for charAt_Example.forName
             e.printStackTrace();
         } finally
 

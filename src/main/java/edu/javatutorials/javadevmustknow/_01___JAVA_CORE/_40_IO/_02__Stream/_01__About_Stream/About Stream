@@ -1,0 +1,16 @@
+Stream
+
+
+A stream can be defined as a    sequence of data.
+
+
+There are two kinds of Streams:
+
+1.      InPutStream − The InputStream is used to read data from a source.
+
+2.      OutPutStream − The OutputStream is used for writing data to a destination.
+
+
+
+
+
