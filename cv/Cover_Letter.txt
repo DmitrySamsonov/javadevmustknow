@@ -1,0 +1,41 @@
+Hi, Dear Sir or Madam!
+
+My name is Dmitry, the surname is Samsonov.
+And I want to work as a Junior Java Developer.
+
+About me:
+Graduated BSUIR (Belarusian State University of Informatics and Radioelectronics),
+FKSaN (Faculty of Computer Systems and Networks),
+Specialty: Computing Machines, Systems and Networks,
+in 2012 - 2017.
+
+Passed course "Developing and delivering enterprise solutions on Java."
+in Netcracker company                            Nov. 2016 - Jan. 2017
+ Projects: 1) Web application development using logic layers,
+              JSP/Servlet API, JDBC.
+ 2) Full-stack web application development using
+ Spring, Hibernate.
+
+Work 3 month in Ispirer Systems Ltd.       May 2017 - July 2017
+on position Junior Java Developer
+My daily tasks were:
+Finding bugs in the automation of migration projects from
+Delphi Form to Java Swing. Development of the optimal solution.
+Building tests. Creating tasks.
+
+
+GitHub:
+https://github.com/DmitrySamsonov
+
+CV:
+https://github.com/DmitrySamsonov/JuniorJavaCV/blob/master/Dmitry_Samsonov_Junior_Java_CV.pdf
+
+Email/Skype: dmitry.samsonov.alexandrovich@gmail.com
+Phone: +375339031864
+
+
+Waiting for your reply and instructions. 
+Thank you!
+
+Sincerely, 
+Dmitry Samsonov 

@@ -1,4 +1,4 @@
-package edu.javatutorials.javadevmustknow._01___JAVA_CORE._11_Strings_Class.String_methods.contentEquals;
+package edu.javatutorials.javadevmustknow._01___JAVA_CORE._11_Strings.String_methods.contentEquals;
 
 public class contentEquals {
 

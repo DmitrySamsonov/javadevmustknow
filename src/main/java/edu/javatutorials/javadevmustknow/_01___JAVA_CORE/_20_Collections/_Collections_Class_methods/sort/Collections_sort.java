@@ -6,13 +6,26 @@ import java.util.List;
 
 public class Collections_sort {
     public static void main(String[] args) {
-        List<Animal> animalList = new ArrayList<>();
-        animalList.add(new Animal("elephant", 1800));
-        animalList.add(new Animal("rabbit", 8));
-        animalList.add(new Animal("dog", 40));
-        animalList.add(new Animal("squirrel", 2));
-        animalList.add(new Animal("cat", 5));
+        List<String> cityList = new ArrayList<>();
+        cityList.add("bbb");
+        cityList.add("ddd");
+        cityList.add("fff");
+        cityList.add("eee");
+        cityList.add("aaa");
 
-        Collections.sort(animalList);
+
+        print(cityList);
+
+        System.out.println("\nCollection.sort() :\n");
+
+        Collections.sort(cityList);
+
+        print(cityList);
+    }
+
+    private static void print(List<String> cityList) {
+        for(String city : cityList){
+            System.out.println(city);
+        }
     }
 }

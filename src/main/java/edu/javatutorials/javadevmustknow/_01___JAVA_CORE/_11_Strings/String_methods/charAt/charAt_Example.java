@@ -1,4 +1,4 @@
-package edu.javatutorials.javadevmustknow._01___JAVA_CORE._11_Strings_Class.String_methods.charAt;
+package edu.javatutorials.javadevmustknow._01___JAVA_CORE._11_Strings.String_methods.charAt;
 
 public class charAt_Example {
 

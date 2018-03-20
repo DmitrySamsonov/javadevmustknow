@@ -2,11 +2,9 @@ package edu.javatutorials.javadevmustknow._01___JAVA_CORE._20_Collections._Colle
 
 public class Animal {
     private String name;
-    private int weight;
 
-    public Animal(String name, int weight) {
+    public Animal(String name) {
         this.name = name;
-        this.weight = weight;
     }
 
     public String getName() {
@@ -17,12 +15,5 @@ public class Animal {
         this.name = name;
     }
 
-    public int getWeight() {
-        return weight;
-    }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
 
 }

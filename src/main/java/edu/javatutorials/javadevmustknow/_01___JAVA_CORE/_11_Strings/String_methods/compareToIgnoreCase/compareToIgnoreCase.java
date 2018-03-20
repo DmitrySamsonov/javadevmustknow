@@ -1,4 +1,4 @@
-package edu.javatutorials.javadevmustknow._01___JAVA_CORE._11_Strings_Class.String_methods.compareToIgnoreCase;
+package edu.javatutorials.javadevmustknow._01___JAVA_CORE._11_Strings.String_methods.compareToIgnoreCase;
 
 public class compareToIgnoreCase {
 
